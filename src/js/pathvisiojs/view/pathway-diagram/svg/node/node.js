@@ -78,6 +78,13 @@ pathvisiojs.view.pathwayDiagram.svg.node = function(){
       element.y = d.y - targetElement.y;
       return 'translate(' + element.x + ' ' + element.y + ')';
     })
+    .attr("style", function (d) {
+      var style = '';
+      if (d.hasOwnProperty('backgroundColor')) {
+        style += 'fill:' + d.backgroundColor + '; ';
+      }
+      return style;
+    })
     .call(drag)
 
     /****************** 
@@ -85,10 +92,13 @@ pathvisiojs.view.pathwayDiagram.svg.node = function(){
      * ***************/
 
     var shapeType = strcase.paramCase(args.data.ShapeType);
-    if (args.allSymbolNames.indexOf(shapeType) > -1) {
+    
+    // check for whether desired shape type is available as a symbol
+    if (pathvisiojs.view.pathwayDiagram.svg.symbol.semanticNameToIdMapping.hasOwnProperty(shapeType)) {
       //console.log('We will use an SVG "use" element to render this ' + shapeType);
       pathvisiojs.view.pathwayDiagram.svg.node.useElement.render(nodeContainer, args.data);
     }
+    // else check for whether it is available as a pathShape
     else {
       //console.log('We will use a pathShape to render this ' + shapeType);
       pathvisiojs.view.pathwayDiagram.svg.node.pathShape.render(nodeContainer, args.data);

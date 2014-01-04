@@ -207,52 +207,142 @@ window.onload = function() {
   }],
   function(err) {
     var customSymbols = [
-      {'id': 'arc', 'url': srcDirectoryUrl + 'shape-library/symbols/arc.svg'},
-      {'id': 'brace', 'url': srcDirectoryUrl + 'shape-library/symbols/brace.svg'},
-      {'id': 'endoplasmic-reticulum', 'url': srcDirectoryUrl + 'shape-library/symbols/endoplasmic-reticulum.svg'},
-      {'id': 'golgi-apparatus', 'url': srcDirectoryUrl + 'shape-library/symbols/golgi-apparatus.svg'},
-      {'id': 'hexagon', 'url': srcDirectoryUrl + 'shape-library/symbols/hexagon.svg'},
-      {'id': 'mim-degradation', 'url': srcDirectoryUrl + 'shape-library/symbols/mim-degradation.svg'},
-      {'id': 'mitochondria', 'url': srcDirectoryUrl + 'shape-library/symbols/mitochondria.svg'},
-      {'id': 'oval', 'url': srcDirectoryUrl + 'shape-library/symbols/oval.svg'},
-      {'id': 'pentagon', 'url': srcDirectoryUrl + 'shape-library/symbols/pentagon.svg'},
-      {'id': 'rectangle', 'url': srcDirectoryUrl + 'shape-library/symbols/rectangle.svg'},
-      {'id': 'sarcoplasmic-reticulum','url': srcDirectoryUrl + 'shape-library/symbols/sarcoplasmic-reticulum.svg'},
-      {'id': 'triangle', 'url': srcDirectoryUrl + 'shape-library/symbols/triangle.svg'},
-      {'id': 'none', 'url': srcDirectoryUrl + 'shape-library/symbols/none.svg'}
+      {'semanticName': 'arc', 'url': srcDirectoryUrl + 'shape-library/symbols/arc.svg'},
+      {'semanticName': 'brace', 'url': srcDirectoryUrl + 'shape-library/symbols/brace.svg'},
+      {'semanticName': 'endoplasmic-reticulum', 'url': srcDirectoryUrl + 'shape-library/symbols/endoplasmic-reticulum.svg'},
+      {'semanticName': 'golgi-apparatus', 'url': srcDirectoryUrl + 'shape-library/symbols/golgi-apparatus.svg'},
+      {'semanticName': 'hexagon', 'url': srcDirectoryUrl + 'shape-library/symbols/hexagon.svg'},
+      {'semanticName': 'mim-degradation', 'url': srcDirectoryUrl + 'shape-library/symbols/mim-degradation.svg'},
+      {'semanticName': 'mitochondria', 'url': srcDirectoryUrl + 'shape-library/symbols/mitochondria.svg'},
+      {'semanticName': 'oval', 'url': srcDirectoryUrl + 'shape-library/symbols/oval.svg'},
+      {'semanticName': 'pentagon', 'url': srcDirectoryUrl + 'shape-library/symbols/pentagon.svg'},
+      {'semanticName': 'rectangle', 'url': srcDirectoryUrl + 'shape-library/symbols/rectangle.svg'},
+      {'semanticName': 'sarcoplasmic-reticulum','url': srcDirectoryUrl + 'shape-library/symbols/sarcoplasmic-reticulum.svg'},
+      {'semanticName': 'triangle', 'url': srcDirectoryUrl + 'shape-library/symbols/triangle.svg'},
+      {'semanticName': 'none', 'url': srcDirectoryUrl + 'shape-library/symbols/none.svg'}
     ];
 
     var customMarkers = self.customMarkers = [
-      {'semanticName': 'arrow', 'url': srcDirectoryUrl + 'shape-library/markers/arrow.svg'},
-      {'semanticName': 'necessary-stimulation', 'url': srcDirectoryUrl + 'shape-library/markers/mim-necessary-stimulation.svg'},
-      {'semanticName': 'binding', 'url': srcDirectoryUrl + 'shape-library/markers/mim-binding.svg'},
-      {'semanticName': 'conversion', 'url': srcDirectoryUrl + 'shape-library/markers/mim-conversion.svg'},
-      {'semanticName': 'stimulation', 'url': srcDirectoryUrl + 'shape-library/markers/mim-stimulation.svg'},
-      {'semanticName': 'modification', 'url': srcDirectoryUrl + 'shape-library/markers/mim-modification.svg'},
-      {'semanticName': 'catalysis', 'url': srcDirectoryUrl + 'shape-library/markers/mim-catalysis.svg'},
-      {'semanticName': 'inhibition', 'url': srcDirectoryUrl + 'shape-library/markers/mim-inhibition.svg'},
-      {'semanticName': 'cleavage', 'url': srcDirectoryUrl + 'shape-library/markers/mim-cleavage.svg'},
-      {'semanticName': 'covalent-bond', 'url': srcDirectoryUrl + 'shape-library/markers/mim-covalent-bond.svg'},
-      {'semanticName': 'transcription-translation', 'url': srcDirectoryUrl + 'shape-library/markers/mim-transcription-translation.svg'},
-      {'semanticName': 'gap', 'url': srcDirectoryUrl + 'shape-library/markers/mim-gap.svg'},
-      {'semanticName': 'inhibitory-activity', 'url': srcDirectoryUrl + 'shape-library/markers/t-bar.svg'},
-      {'semanticName': 'unspecified', 'url': srcDirectoryUrl + 'shape-library/markers/none.svg'},
-      {'semanticName': 'activity', 'url': srcDirectoryUrl + 'shape-library/markers/arrow.svg'},
-      {'semanticName': 'mim-branching-left', 'url': srcDirectoryUrl + 'shape-library/markers/mim-branching-left.svg'},
-      {'semanticName': 'mim-branching-right', 'url': srcDirectoryUrl + 'shape-library/markers/mim-branching-right.svg'},
-      {'semanticName': 'mim-necessary-stimulation', 'url': srcDirectoryUrl + 'shape-library/markers/mim-necessary-stimulation.svg'},
-      {'semanticName': 'mim-binding', 'url': srcDirectoryUrl + 'shape-library/markers/mim-binding.svg'},
-      {'semanticName': 'mim-conversion', 'url': srcDirectoryUrl + 'shape-library/markers/mim-conversion.svg'},
-      {'semanticName': 'mim-stimulation', 'url': srcDirectoryUrl + 'shape-library/markers/mim-stimulation.svg'},
-      {'semanticName': 'mim-modification', 'url': srcDirectoryUrl + 'shape-library/markers/mim-modification.svg'},
-      {'semanticName': 'mim-catalysis', 'url': srcDirectoryUrl + 'shape-library/markers/mim-catalysis.svg'},
-      {'semanticName': 'mim-inhibition', 'url': srcDirectoryUrl + 'shape-library/markers/mim-inhibition.svg'},
-      {'semanticName': 'mim-cleavage', 'url': srcDirectoryUrl + 'shape-library/markers/mim-cleavage.svg'},
-      {'semanticName': 'mim-covalent-bond', 'url': srcDirectoryUrl + 'shape-library/markers/mim-covalent-bond.svg'},
-      {'semanticName': 'mim-transcription-translation', 'url': srcDirectoryUrl + 'shape-library/markers/mim-transcription-translation.svg'},
-      {'semanticName': 'mim-gap', 'url': srcDirectoryUrl + 'shape-library/markers/mim-gap.svg'},
-      {'semanticName': 't-bar', 'url': srcDirectoryUrl + 'shape-library/markers/t-bar.svg'},
-      {'semanticName': 'none', 'url': srcDirectoryUrl + 'shape-library/markers/none.svg'}
+      {
+        'semanticName': 'arrow',
+        'url': srcDirectoryUrl + 'shape-library/markers/arrow.svg'
+      },
+      {
+        'semanticName': 'necessary-stimulation',
+        'url': srcDirectoryUrl + 'shape-library/markers/mim-necessary-stimulation.svg'
+      },
+      {
+        'semanticName': 'binding',
+        'url': srcDirectoryUrl + 'shape-library/markers/mim-binding.svg'
+      },
+      {
+        'semanticName': 'conversion',
+        'url': srcDirectoryUrl + 'shape-library/markers/mim-conversion.svg'
+      },
+      {
+        'semanticName': 'stimulation',
+        'url': srcDirectoryUrl + 'shape-library/markers/mim-stimulation.svg'
+      },
+      {
+        'semanticName': 'modification',
+        'url': srcDirectoryUrl + 'shape-library/markers/mim-modification.svg'
+      },
+      {
+        'semanticName': 'catalysis',
+        'url': srcDirectoryUrl + 'shape-library/markers/mim-catalysis.svg'
+      },
+      {
+        'semanticName': 'inhibition',
+        'url': srcDirectoryUrl + 'shape-library/markers/mim-inhibition.svg'
+      },
+      {
+        'semanticName': 'cleavage',
+        'url': srcDirectoryUrl + 'shape-library/markers/mim-cleavage.svg'
+      },
+      {
+        'semanticName': 'covalent-bond',
+        'url': srcDirectoryUrl + 'shape-library/markers/mim-covalent-bond.svg'
+      },
+      {
+        'semanticName': 'transcription-translation',
+        'url': srcDirectoryUrl + 'shape-library/markers/mim-transcription-translation.svg'
+      },
+      {
+        'semanticName': 'gap',
+        'url': srcDirectoryUrl + 'shape-library/markers/mim-gap.svg'
+      },
+      {
+        'semanticName': 'inhibitory-activity',
+        'url': srcDirectoryUrl + 'shape-library/markers/t-bar.svg'
+      },
+      {
+        'semanticName': 'unspecified',
+        'url': srcDirectoryUrl + 'shape-library/markers/none.svg'
+      },
+      {
+        'semanticName': 'activity',
+        'url': srcDirectoryUrl + 'shape-library/markers/arrow.svg'
+      },
+      {
+        'semanticName': 'mim-branching-left',
+        'url': srcDirectoryUrl + 'shape-library/markers/mim-branching-left.svg'
+      },
+      {
+        'semanticName': 'mim-branching-right',
+        'url': srcDirectoryUrl + 'shape-library/markers/mim-branching-right.svg'
+      },
+      {
+        'semanticName': 'mim-necessary-stimulation',
+        'url': srcDirectoryUrl + 'shape-library/markers/mim-necessary-stimulation.svg'
+      },
+      {
+        'semanticName': 'mim-binding',
+        'url': srcDirectoryUrl + 'shape-library/markers/mim-binding.svg'
+      },
+      {
+        'semanticName': 'mim-conversion',
+        'url': srcDirectoryUrl + 'shape-library/markers/mim-conversion.svg'
+      },
+      {
+        'semanticName': 'mim-stimulation',
+        'url': srcDirectoryUrl + 'shape-library/markers/mim-stimulation.svg'
+      },
+      {
+        'semanticName': 'mim-modification',
+        'url': srcDirectoryUrl + 'shape-library/markers/mim-modification.svg'
+      },
+      {
+        'semanticName': 'mim-catalysis',
+        'url': srcDirectoryUrl + 'shape-library/markers/mim-catalysis.svg'
+      },
+      {
+        'semanticName': 'mim-inhibition',
+        'url': srcDirectoryUrl + 'shape-library/markers/mim-inhibition.svg'
+      },
+      {
+        'semanticName': 'mim-cleavage',
+        'url': srcDirectoryUrl + 'shape-library/markers/mim-cleavage.svg'
+      },
+      {
+        'semanticName': 'mim-covalent-bond',
+        'url': srcDirectoryUrl + 'shape-library/markers/mim-covalent-bond.svg'
+      },
+      {
+        'semanticName': 'mim-transcription-translation',
+        'url': srcDirectoryUrl + 'shape-library/markers/mim-transcription-translation.svg'
+      },
+      {
+        'semanticName': 'mim-gap',
+        'url': srcDirectoryUrl + 'shape-library/markers/mim-gap.svg'
+      },
+      {
+        'semanticName': 't-bar',
+        'url': srcDirectoryUrl + 'shape-library/markers/t-bar.svg'
+      },
+      {
+        'semanticName': 'none',
+        'url': srcDirectoryUrl + 'shape-library/markers/none.svg'
+      }
     ];
 
     pathvisiojs.load({

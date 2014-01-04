@@ -33,8 +33,6 @@
 		fill: black;
 		fill-opacity: 1;
 		stroke: none;
-		font-size: 10px;
-		stroke: none;
 	}
 
 	.info-box {
@@ -58,9 +56,10 @@
 		fill-opacity: 1;
 		fill: white;
 		stroke: black;
+		stroke-width: 2;
 		stroke-dasharray: 0;
 		stroke-miterlimit: 1;
-    pointer-events:auto;
+    		pointer-events:auto;
 	}
 	
 	.has-xref:hover {
@@ -76,6 +75,9 @@
 
 	.data-node.metabolite > .text-area {
 		cursor:pointer;
+		fill: blue;
+		fill-opacity: 1;
+		stroke: none;
 	}
 
 	.data-node.pathway {
